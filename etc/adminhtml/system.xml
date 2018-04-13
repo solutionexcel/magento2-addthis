@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Magento2 AddThis extension for share and follow buttons.
+ * @package   Solutionexcel_AddThis
+ * @author    SolutionExcel - https://www.solutionexcel.com/ - info@solutionexcel.com
+ * @copyright Copyright © 2018 SolutionExcel. All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0  Academic Free License 3.0 | Open Source Initiative
+**/
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="solutionexcel_addthis" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>AddThis Configuration</label>
+			<tab>solutionexcel</tab>
+			<resource>Solutionexcel_AddThis::config_solutionexcel_addthis</resource>
+			<group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>General</label>
+				<field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Is Enable</label>
+					<comment><![CDATA[Enable/Disable addthis module.]]></comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="pubid" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+					<label>PUBID</label>
+					<validate>required-entry</validate>
+					<comment><![CDATA[Login into AddThis account go to Profile Options => General then copy ID.]]></comment>
+					<depends>
+                        <field id="enable">1</field>
+                    </depends>
+				</field>
+				<field id="share_buttons" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="select">
+					<label>Share Buttons</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment><![CDATA[Enable/Disable addthis Share Buttons.]]></comment>
+					<depends>
+                        <field id="enable">1</field>
+                    </depends>
+				</field>
+				<field id="follow_buttons" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50" translate="label" type="select">
+					<label>Follow Buttons</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment><![CDATA[Enable/Disable addthis Follow Buttons.]]></comment>
+					<depends>
+                        <field id="enable">1</field>
+                    </depends>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

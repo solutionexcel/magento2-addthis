@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Magento2 AddThis extension for share and follow buttons.
+ * @package   Solutionexcel_AddThis
+ * @author    SolutionExcel - https://www.solutionexcel.com/ - info@solutionexcel.com
+ * @copyright Copyright © 2018 SolutionExcel. All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0  Academic Free License 3.0 | Open Source Initiative
+**/
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+	<module name="Solutionexcel_AddThis" setup_version="1.0.0"/>
+</config>
